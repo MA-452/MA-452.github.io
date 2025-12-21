@@ -3,15 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>Matias Aldom | Software Developer</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <header>
         <nav>
-            <div class="logo">MyBrand</div>
+            <div class="logo">MA.</div>
             <ul>
                 <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -19,28 +21,100 @@
     </header>
 
     <section id="hero">
-        <h1>Hi, I'm [Your Name]</h1>
-        <p>A Creative Developer building digital experiences.</p>
-        <a href="#projects" class="btn">View My Work</a>
+        <div class="container">
+            <h1>Matias Aldom</h1>
+            <p class="subtitle">Computer Science Student | Software Developer</p>
+            <p class="hero-summary">
+                A Computer Science student at Trinity Western University with experience building integrated web portals 
+                and automation workflows to streamline business operations.
+            </p>
+            <div class="hero-btns">
+                <a href="#projects" class="btn">View Projects</a>
+                <a href="#contact" class="btn btn-outline">Get In Touch</a>
+            </div>
+        </div>
     </section>
 
-    <section id="projects">
-        <h2>Featured Projects</h2>
+    <section id="about" class="container">
+        <h2 class="section-title">About Me</h2>
+        <p>
+            I am a Computer Science student at Trinity Western University, graduating in May 2027[cite: 4, 5, 9]. 
+            I am passionate about creating digital tools that solve real-world problems, from helping non-profits 
+            manage food donations to automating asset tracking for IT consultancies. 
+            As the Founder of the 3D Printing & Modeling Club, I also enjoy fostering a community of makers and exploring emerging technologies[cite: 13, 17].
+        </p>
+
+        <div class="skills-grid">
+            <div class="skill-category">
+                <h3>Languages</h3>
+                <p>Java, C/C++, JavaScript, Python, SQL, PHP, HTML/CSS</p>
+            </div>
+            <div class="skill-category">
+                <h3>Tools & Frameworks</h3>
+                <p>React, Node, Firebase, Git, AWS, Rewst</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="bg-light">
+        <div class="container">
+            <h2 class="section-title">Experience & Education</h2>
+            
+            <div class="timeline-item">
+                <h3>Software Developer Intern | Pilotfish Networks</h3>
+                <span class="date">May 2025 – August 2025</span>
+                <ul>
+                    <li>Integrated Microsoft 365 APIs to build a real-time customer portal[cite: 11].</li>
+                    <li>Developed Rewst automation workflows to classify and track client device lifecycles[cite: 12].</li>
+                </ul>
+            </div>
+
+            <div class="timeline-item">
+                <h3>Founder & President | 3DPMC (TWU)</h3>
+                <span class="date">September 2025 – Present</span>
+                <ul>
+                    <li>Leading a multidisciplinary team to foster innovation in 3D design and printing[cite: 17, 18].</li>
+                </ul>
+            </div>
+
+            <div class="timeline-item">
+                <h3>Bachelor of Computer Science</h3>
+                <span class="date">Trinity Western University | Expected May 2027</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="container">
+        <h2 class="section-title">Selected Projects</h2>
         <div class="project-grid">
             <div class="project-card">
-                <h3>Project One</h3>
-                <p>A brief description of the tech stack and what this app does.</p>
+                <h3>FoodFlow</h3>
+                <p>A mobile application for Food Link Society to digitize and speed up donated food intake systems[cite: 23].</p>
+                <p class="tech-stack"><strong>Tech:</strong> Mobile App Development (Placeholder for Stack)</p>
+                <a href="#" class="project-link">GitHub Repo &rarr;</a>
             </div>
+            
             <div class="project-card">
-                <h3>Project Two</h3>
-                <p>A brief description of the tech stack and what this app does.</p>
+                <h3>Pilotfish Portal</h3>
+                <p>A secure customer portal displaying assets, subscriptions, and support tickets via Microsoft 365 APIs[cite: 27, 28].</p>
+                <p class="tech-stack"><strong>Tech:</strong> React, Node, Microsoft 365 APIs</p>
+                <a href="#" class="project-link">GitHub Repo &rarr;</a>
             </div>
         </div>
     </section>
 
     <footer id="contact">
-        <h2>Let's Connect</h2>
-        <p>Email: hello@yourdomain.com</p>
+        <div class="container">
+            <h2 class="section-title">Contact</h2>
+            <p>I am always open to discussing new opportunities or tech projects.</p>
+            <div class="contact-links">
+                <a href="mailto:matias@aldom.com">matias@aldom.com</a>
+                <a href="https://www.linkedin.com/in/matias-aldom-7273a634b/" target="_blank">LinkedIn</a>
+                <a href="#" target="_blank">GitHub</a>
+            </div>
+            <p class="copyright">&copy; 2025 Matias Aldom</p>
+        </div>
     </footer>
+
 </body>
 </html>
