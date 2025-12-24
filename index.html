@@ -1,273 +1,371 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Matias Aldom | Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-<script type="importmap">
-{
-  "imports": {
-    "react": "https://esm.sh/react@^19.2.3",
-    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
-    "react/": "https://esm.sh/react@^19.2.3/",
-    "@google/genai": "https://esm.sh/@google/genai@^1.34.0"
-  }
-}
-</script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
-<body class="halftone selection:bg-pink-500 selection:text-white">
+<body class="bg-grid">
+    <!-- Background Elements -->
+    <div class="glow-blob w-[1200px] h-[1200px] bg-zinc-300 -top-[400px] -left-[400px]"></div>
+    <div class="glow-blob w-[900px] h-[900px] bg-zinc-200 -bottom-[300px] -right-[300px]"></div>
+    <div class="glow-blob w-[700px] h-[700px] bg-zinc-300 top-[40%] -right-[10%]"></div>
 
-    <!-- HERO SECTION -->
-    <main class="max-w-6xl mx-auto px-4 py-20">
-        <section class="mb-40 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div class="relative z-10">
-                <h1 class="comic-font text-8xl md:text-9xl text-white chromatic-text leading-tight mb-4">
-                    MATIAS ALDOM
-                </h1>
-                <div class="inline-block bg-pink-500 text-white font-black px-6 py-2 skew-x-12 mb-8 text-xl">
-                    SOFTWARE DEVELOPER // TWU STUDENT
-                </div>
-                <div class="flex flex-wrap gap-4 mt-6">
-                    <a href="mailto:matias@aldom.com" class="bg-white text-black font-black px-8 py-3 border-4 border-black hover:bg-cyan-500 transition-all hover:-translate-y-1 shadow-[5px_5px_0px_#ec4899]">
-                        EMAIL
-                    </a>
-                    <a href="https://www.linkedin.com/in/maaldom" target="_blank" class="bg-slate-800 text-white font-black px-8 py-3 border-4 border-white hover:bg-pink-600 transition-all hover:-translate-y-1">
-                        LINKEDIN
-                    </a>
-                    <a href="https://github.com/MA-452" target="_blank" class="bg-white text-black font-black px-8 py-3 border-4 border-black hover:bg-cyan-500 transition-all hover:-translate-y-1 shadow-[5px_5px_0px_#ec4899]">
-                        GITHUB
-                    </a>
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 px-6 py-6">
+        <div class="max-w-6xl mx-auto flex justify-between items-center glass px-8 py-4 rounded-[2rem]">
+            <div class="text-xl font-black text-black tracking-tighter flex items-center gap-2">
+                <div class="w-8 h-8 bg-black rounded-lg flex items-center justify-center text-white text-[10px]">MA</div>
+                MATIAS ALDOM
+            </div>
+            <div class="hidden md:flex space-x-8 text-[10px] font-bold uppercase tracking-[0.25em] text-zinc-500">
+                <a href="#about" class="hover:text-black transition-colors">About</a>
+                <a href="#education" class="hover:text-black transition-colors">Education</a>
+                <a href="#experience" class="hover:text-black transition-colors">Experience</a>
+                <a href="#projects" class="hover:text-black transition-colors">Projects</a>
+            </div>
+            <a href="mailto:matias@aldom.com" class="px-6 py-2.5 bg-black text-white hover:bg-zinc-800 rounded-2xl text-[10px] font-black uppercase tracking-widest transition-all shadow-xl shadow-black/10">
+                Hire Me
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-52 pb-24 px-6 text-center">
+        <div class="max-w-6xl mx-auto">
+            <div class="inline-flex items-center gap-3 px-5 py-2 rounded-full glass-card text-black text-[11px] font-black uppercase tracking-[0.3em] mb-12 border border-black/5">
+                <span class="relative flex h-2 w-2">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-black opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-2 w-2 bg-black"></span>
+                </span>
+                Seeking Internship opportunities
+            </div>
+            <h1 class="text-7xl md:text-[11rem] font-black text-black mb-16 leading-[0.75] tracking-tighter">
+                MATIAS <br>
+                <span class="text-zinc-300 uppercase">ALDOM.</span>
+            </h1>
+            <div class="flex flex-wrap justify-center gap-6">
+                <a href="https://www.linkedin.com/in/maaldom" target="_blank" class="group flex items-center gap-4 text-white bg-black hover:bg-zinc-800 px-8 py-4 rounded-3xl transition-all shadow-2xl shadow-black/20">
+                    <i data-lucide="linkedin" class="w-5 h-5"></i>
+                    <span class="text-sm font-black uppercase tracking-widest">LinkedIn</span>
+                </a>
+                <a href="https://github.com/MA-452" target="_blank" class="group flex items-center gap-4 text-black bg-white hover:bg-zinc-50 px-8 py-4 rounded-3xl transition-all shadow-xl border border-zinc-200">
+                    <i data-lucide="github" class="w-5 h-5"></i>
+                    <span class="text-sm font-black uppercase tracking-widest">GitHub</span>
+                </a>
+                <div class="flex items-center gap-4 px-8 py-4 rounded-3xl glass-card border-white/80">
+                    <i data-lucide="mail" class="w-5 h-5 text-black"></i>
+                    <span class="text-sm font-bold text-black">matias@aldom.com</span>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="py-32 px-6">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-20 items-center">
             <div class="relative group">
-                <div class="absolute inset-0 bg-pink-500 skew-y-6 -z-10 group-hover:skew-y-2 transition-transform duration-500"></div>
-                <div class="absolute inset-0 bg-cyan-500 -skew-x-6 -z-10 group-hover:-skew-x-2 transition-transform duration-500 delay-75"></div>
-                <div class="border-8 border-white p-2 bg-slate-900 overflow-hidden">
-                    <img src="images/IMG_2681.jpeg" alt="Matias" class="w-full grayscale group-hover:grayscale-0 transition-all duration-700">
-                </div>
-                <div class="absolute bottom-6 right-6 bg-yellow-400 text-black px-4 py-1 comic-font text-2xl rotate-3">
-                    ID_ARCHIVE_092
-                </div>
-            </div>
-        </section>
-
-        <!-- EDUCATION SECTION -->
-        <section class="mb-40">
-            <div class="bg-slate-900 p-8 md:p-12 border-8 border-white rounded-lg shadow-[15px_15px_0px_#06b6d4] -rotate-1">
-                <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 mb-8">
-                    <h2 class="comic-font text-5xl text-white tracking-widest border-b-8 border-pink-500">EDUCATION</h2>
-                    <div class="bg-white text-black p-4 font-black rotate-2">
-                        EXPECTED GRAD: DEC 2027
+                <div class="absolute -inset-4 bg-zinc-200 rounded-[3rem] rotate-2 group-hover:rotate-0 transition-transform duration-500 -z-10"></div>
+                <div class="aspect-[4/5] bg-zinc-100 rounded-[2.5rem] border-4 border-white shadow-2xl overflow-hidden glass relative flex items-center justify-center">
+                    <div class="flex flex-col items-center gap-4 text-zinc-300">
+                        <i data-lucide="user" class="w-24 h-24"></i>
+                        <p class="text-[10px] font-black uppercase tracking-widest">Profile Placeholder</p>
                     </div>
                 </div>
-                <div class="space-y-4">
-                    <h3 class="text-3xl font-black text-cyan-400">TRINITY WESTERN UNIVERSITY</h3>
-                    <p class="text-2xl text-slate-300 italic font-bold">Bachelor of Computer Science</p>
-                    <p class="text-lg text-slate-400">Langley, BC</p>
+                <div class="absolute -bottom-8 -right-8 glass-card p-8 rounded-3xl border border-white/60 shadow-2xl">
+                    <p class="text-4xl font-black text-black leading-none">03+</p>
+                    <p class="text-[10px] font-black uppercase tracking-widest text-zinc-400 mt-2">Years of Development</p>
                 </div>
             </div>
-        </section>
-
-        <!-- EXPERIENCE SECTION -->
-        <section class="mb-40">
-            <h2 class="comic-font text-7xl text-white mb-16 text-center -skew-x-6 italic">EXPERIENCE</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-                <!-- Exp 1 -->
-                <div class="relative p-10 border-4 border-white bg-cyan-900/40 rotate-1 hover:rotate-0 transition-transform">
-                    <div class="absolute -top-6 -left-4 bg-white text-black px-4 py-1 comic-font text-2xl shadow-lg">01</div>
-                    <h3 class="text-2xl font-black text-white mb-1">SOFTWARE DEVELOPER INTERN</h3>
-                    <p class="text-xl font-bold text-yellow-400 mb-4">Pilotfish Networks</p>
-                    <p class="text-sm text-slate-400 mb-6">May 2025 – August 2025</p>
-                    <ul class="space-y-4">
-                        <li class="flex gap-3 text-slate-200">
-                            <span class="text-pink-500 font-bold">▶</span>
-                            <span>Built a web-based customer portal integrating Microsoft 365 APIs.</span>
-                        </li>
-                        <li class="flex gap-3 text-slate-200">
-                            <span class="text-pink-500 font-bold">▶</span>
-                            <span>Created Rewst automation workflows to classify devices by tier.</span>
-                        </li>
-                    </ul>
+            <div>
+                <div class="flex items-center gap-4 mb-8">
+                    <div class="w-12 h-1 bg-black rounded-full"></div>
+                    <span class="text-xs font-black uppercase tracking-[0.4em] text-zinc-400">About Me</span>
                 </div>
-                <!-- Exp 2 -->
-                <div class="relative p-10 border-4 border-white bg-pink-900/40 -rotate-1 hover:rotate-0 transition-transform">
-                    <div class="absolute -top-6 -left-4 bg-white text-black px-4 py-1 comic-font text-2xl shadow-lg">02</div>
-                    <h3 class="text-2xl font-black text-white mb-1">FOUNDER & PRESIDENT (3DPMC)</h3>
-                    <p class="text-xl font-bold text-yellow-400 mb-4">Trinity Western University</p>
-                    <p class="text-sm text-slate-400 mb-6">Sept 2025 – Present</p>
-                    <ul class="space-y-4">
-                        <li class="flex gap-3 text-slate-200">
-                            <span class="text-pink-500 font-bold">▶</span>
-                            <span>Founded the 3D Printing & Modeling Club, leading workshops and campus events.</span>
-                        </li>
-                        <li class="flex gap-3 text-slate-200">
-                            <span class="text-pink-500 font-bold">▶</span>
-                            <span>Managed a multidisciplinary executive team and partnered with faculty.</span>
-                        </li>
-                    </ul>
+                <h2 class="text-5xl font-black text-black mb-8 tracking-tighter leading-[1.1]">
+                    Blending Technical Rigor <br> with Innovation.
+                </h2>
+                <div class="space-y-6 text-xl text-zinc-600 font-medium leading-relaxed">
+                    <p>
+                        I am a dedicated Computer Science student at Trinity Western University with a passion for building software that solves real-world problems. 
+                        My approach combines a deep understanding of core systems with a focus on intuitive user experiences.
+                    </p>
+                    <p>
+                        Beyond coding, I lead the 3D Printing & Modeling Club, where I foster a community of makers and innovators. 
+                        I believe that the best technology is born from collaborative thinking and a relentless pursuit of excellence.
+                    </p>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- PROJECTS SECTION -->
-        <section class="mb-40">
-            
-            <h2 class="comic-font text-7xl text-white mb-16 text-center -skew-x-6 italic">OPERATIONS LOG</h2>
-            
-            <div class="space-y-32">
-                <!-- Project 1 -->
-                <div class="flex flex-col md:flex-row gap-12 items-center">
-                    <div class="w-full md:w-1/2">
-                        <div class="relative border-8 border-white shadow-[10px_10px_0px_#ec4899] bg-slate-900 group">
-                            <div id="slideshow-1" class="slideshow-container aspect-video">
-                                <img src="https://picsum.photos/seed/foodflow1/800/450" class="slide object-cover" alt="FF1">
-                                <img src="https://picsum.photos/seed/foodflow2/800/450" class="slide object-cover" alt="FF2">
-                                <img src="https://picsum.photos/seed/foodflow3/800/450" class="slide object-cover" alt="FF3">
+    <!-- Education Section -->
+    <section id="education" class="py-40 px-6 bg-white/40 border-y border-zinc-200 relative">
+        <div class="max-w-6xl mx-auto">
+            <div class="relative mb-24">
+                <div class="ghost-number">01</div>
+                <div class="flex flex-col relative z-10">
+                    <div class="flex items-center gap-6 mb-4">
+                        <div class="w-14 h-14 rounded-2xl bg-black flex items-center justify-center shadow-2xl shadow-black/20">
+                            <i data-lucide="graduation-cap" class="w-7 h-7 text-white"></i>
+                        </div>
+                        <h2 class="text-6xl font-black text-black tracking-tighter">Education</h2>
+                    </div>
+                    <div class="w-24 h-2 bg-black rounded-full ml-20"></div>
+                </div>
+            </div>
+
+            <div class="glass-card p-14 rounded-[3.5rem] relative overflow-hidden max-w-4xl mx-auto shadow-2xl">
+                <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-14 gap-10">
+                    <div class="relative z-10">
+                        <h3 class="text-5xl font-black text-black mb-4 tracking-tighter">Trinity Western University</h3>
+                        <div class="flex items-center gap-4 text-zinc-500 font-black text-base uppercase tracking-widest">
+                            <i data-lucide="map-pin" class="w-5 h-5"></i>
+                            Langley, BC
+                        </div>
+                    </div>
+                    <div class="px-8 py-4 rounded-3xl bg-black text-xs font-black text-white uppercase tracking-[0.25em] shadow-2xl shadow-black/30 relative z-10">
+                        Expected Grad: Dec 2027
+                    </div>
+                </div>
+                <p class="text-4xl font-black text-zinc-950 tracking-tight leading-none mb-14">Bachelor of Computer Science</p>
+                <ul class="space-y-8 relative z-10">
+                    <li class="flex gap-8 text-zinc-900 leading-relaxed font-semibold text-xl">
+                        <div class="mt-3.5 w-3 h-3 rounded-full bg-zinc-950 shrink-0"></div>
+                        Specializing in Software Systems and Artificial Intelligence.
+                    </li>
+                    <li class="flex gap-8 text-zinc-900 leading-relaxed font-semibold text-xl">
+                        <div class="mt-3.5 w-3 h-3 rounded-full bg-zinc-950 shrink-0"></div>
+                        Academic excellence focus with practical application.
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-40 px-6 relative">
+        <div class="max-w-6xl mx-auto">
+            <div class="relative mb-24">
+                <div class="ghost-number">02</div>
+                <div class="flex flex-col relative z-10">
+                    <div class="flex items-center gap-6 mb-4">
+                        <div class="w-14 h-14 rounded-2xl bg-black flex items-center justify-center shadow-2xl shadow-black/20">
+                            <i data-lucide="briefcase" class="w-7 h-7 text-white"></i>
+                        </div>
+                        <h2 class="text-6xl font-black text-black tracking-tighter">Experience</h2>
+                    </div>
+                    <div class="w-24 h-2 bg-black rounded-full ml-20"></div>
+                </div>
+            </div>
+
+            <div class="space-y-16 max-w-4xl mx-auto">
+                <!-- Pilotfish -->
+                <div class="glass-card p-14 rounded-[3rem] group">
+                    <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-12 gap-8">
+                        <div>
+                            <h3 class="text-4xl font-black text-black mb-4 tracking-tighter">Software Developer Intern</h3>
+                            <div class="flex items-center gap-4 text-zinc-950 font-black uppercase text-sm tracking-[0.2em]">
+                                Pilotfish Networks <span class="w-2 h-2 rounded-full bg-zinc-200"></span>
+                                <span class="text-zinc-400 flex items-center gap-2"><i data-lucide="map-pin" class="w-4 h-4"></i> Langley, BC</span>
                             </div>
-                            <button onclick="document.getElementById('slideshow-1').scrollBy({left: -400, behavior: 'smooth'})" class="absolute left-4 top-1/2 -translate-y-1/2 bg-white text-black comic-font text-xl px-4 py-2 border-4 border-black hover:bg-yellow-400">PREV</button>
-                            <button onclick="document.getElementById('slideshow-1').scrollBy({left: 400, behavior: 'smooth'})" class="absolute right-4 top-1/2 -translate-y-1/2 bg-white text-black comic-font text-xl px-4 py-2 border-4 border-black hover:bg-cyan-400">NEXT</button>
                         </div>
-                        <div class="mt-4 bg-pink-600 text-white px-6 py-2 comic-font text-4xl inline-block -rotate-1 shadow-[4px_4px_0px_white]">
-                            FOODFLOW
+                        <div class="px-7 py-3 rounded-2xl bg-zinc-950 text-[11px] font-black text-white uppercase tracking-[0.2em]">
+                            May 2025 – August 2025
                         </div>
                     </div>
-                    <div class="w-full md:w-1/2 space-y-6">
-                        <h3 class="text-4xl font-black text-cyan-400 underline decoration-white decoration-4 underline-offset-8 uppercase">FOOD IN-TAKE SYSTEM</h3>
-                        <div class="bg-slate-800/80 p-8 border-l-8 border-pink-500 shadow-xl">
-                            <ul class="space-y-6">
-                                <li class="text-lg text-slate-200 font-medium flex items-start">
-                                    <span class="text-pink-500 font-bold mr-3 mt-1">▶</span>
-                                    <span>Mobile application for non-profit Food Link Society to speed up donation intake.</span>
-                                </li>
-                                <li class="text-lg text-slate-200 font-medium flex items-start">
-                                    <span class="text-pink-500 font-bold mr-3 mt-1">▶</span>
-                                    <span>Automated volunteer recording of donations and report generation.</span>
-                                </li>
-                            </ul>
+                    <ul class="space-y-10">
+                        <li class="flex gap-8 text-zinc-800 leading-relaxed font-medium text-xl">
+                            <div class="mt-3.5 w-3 h-3 rounded-full bg-black shrink-0 shadow-sm"></div>
+                            Built a web-based customer portal integrating Microsoft 365 APIs to give clients secure, real-time access to key assets.
+                        </li>
+                    </ul>
+                </div>
+                <!-- 3DPMC -->
+                <div class="glass-card p-14 rounded-[3rem] group">
+                    <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-12 gap-8">
+                        <div>
+                            <h3 class="text-4xl font-black text-black mb-4 tracking-tighter">Founder & President of 3DPMC</h3>
+                            <div class="flex items-center gap-4 text-zinc-950 font-black uppercase text-sm tracking-[0.2em]">
+                                TWU <span class="w-2 h-2 rounded-full bg-zinc-200"></span>
+                                <span class="text-zinc-400 flex items-center gap-2"><i data-lucide="map-pin" class="w-4 h-4"></i> Langley, BC</span>
+                            </div>
                         </div>
+                        <div class="px-7 py-3 rounded-2xl bg-zinc-950 text-[11px] font-black text-white uppercase tracking-[0.2em]">
+                            Sept 2025 – Present
+                        </div>
+                    </div>
+                    <ul class="space-y-10">
+                        <li class="flex gap-8 text-zinc-800 leading-relaxed font-medium text-xl">
+                            <div class="mt-3.5 w-3 h-3 rounded-full bg-black shrink-0 shadow-sm"></div>
+                            Founded the 3D Printing & Modeling Club, overseeing workshops that foster creativity and innovation.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-40 px-6 bg-zinc-50/50 border-y border-zinc-200 relative">
+        <div class="max-w-6xl mx-auto">
+            <div class="relative mb-24">
+                <div class="ghost-number">03</div>
+                <div class="flex flex-col relative z-10">
+                    <div class="flex items-center gap-6 mb-4">
+                        <div class="w-14 h-14 rounded-2xl bg-black flex items-center justify-center shadow-2xl shadow-black/20">
+                            <i data-lucide="code-2" class="w-7 h-7 text-white"></i>
+                        </div>
+                        <h2 class="text-6xl font-black text-black tracking-tighter">Projects</h2>
+                    </div>
+                    <div class="w-24 h-2 bg-black rounded-full ml-20"></div>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12">
+                <!-- Project 1 -->
+                <div class="glass-card rounded-[3rem] overflow-hidden flex flex-col border-white/60 group">
+                    <div class="aspect-video relative overflow-hidden bg-zinc-100 slideshow-container" data-current="0">
+                        <img src="https://images.unsplash.com/photo-1591336373307-bbec50a1228e?auto=format&fit=crop&q=80&w=800" class="slide active">
+                        <img src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?auto=format&fit=crop&q=80&w=800" class="slide">
+                        <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=800" class="slide">
+                        
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-none">
+                            <div class="glass px-6 py-3 rounded-full text-white text-[10px] font-black uppercase tracking-widest border border-white/20">View Project</div>
+                        </div>
+
+                        <button class="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-2xl glass flex items-center justify-center text-black opacity-0 group-hover:opacity-100 translate-x-4 group-hover:translate-x-0 transition-all z-30 prev-btn">
+                            <i data-lucide="chevron-left"></i>
+                        </button>
+                        <button class="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-2xl glass flex items-center justify-center text-black opacity-0 group-hover:opacity-100 -translate-x-4 group-hover:translate-x-0 transition-all z-30 next-btn">
+                            <i data-lucide="chevron-right"></i>
+                        </button>
+
+                        <div class="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2.5 z-30 dots-container">
+                            <div class="h-1.5 w-8 rounded-full bg-white shadow-lg dot"></div>
+                            <div class="h-1.5 w-3 rounded-full bg-white/40 dot"></div>
+                            <div class="h-1.5 w-3 rounded-full bg-white/40 dot"></div>
+                        </div>
+                    </div>
+                    <div class="p-12 flex flex-col flex-grow">
+                        <div class="flex justify-between items-start mb-6">
+                            <span class="text-[10px] font-black uppercase tracking-[0.25em] text-zinc-400">Mobile Application</span>
+                            <i data-lucide="terminal" class="w-5 h-5 text-zinc-300"></i>
+                        </div>
+                        <h3 class="text-3xl font-black text-black mb-6 tracking-tighter">FoodFlow</h3>
+                        <p class="text-zinc-600 text-lg leading-relaxed font-medium">Developed a mobile application for the non-profit Food Link Society to speed up their donated food in-take system.</p>
                     </div>
                 </div>
 
                 <!-- Project 2 -->
-                <div class="flex flex-col md:flex-row-reverse gap-12 items-center">
-                    <div class="w-full md:w-1/2">
-                        <div class="relative border-8 border-white shadow-[10px_10px_0px_#06b6d4] bg-slate-900">
-                            <div id="slideshow-2" class="slideshow-container aspect-video">
-                                <img src="https://picsum.photos/seed/portal1/800/450" class="slide object-cover" alt="P1">
-                                <img src="https://picsum.photos/seed/portal2/800/450" class="slide object-cover" alt="P2">
-                                <img src="https://picsum.photos/seed/portal3/800/450" class="slide object-cover" alt="P3">
-                            </div>
-                            <button onclick="document.getElementById('slideshow-2').scrollBy({left: -400, behavior: 'smooth'})" class="absolute left-4 top-1/2 -translate-y-1/2 bg-white text-black comic-font text-xl px-4 py-2 border-4 border-black hover:bg-yellow-400">PREV</button>
-                            <button onclick="document.getElementById('slideshow-2').scrollBy({left: 400, behavior: 'smooth'})" class="absolute right-4 top-1/2 -translate-y-1/2 bg-white text-black comic-font text-xl px-4 py-2 border-4 border-black hover:bg-pink-400">NEXT</button>
+                <div class="glass-card rounded-[3rem] overflow-hidden flex flex-col border-white/60 group">
+                    <div class="aspect-video relative overflow-hidden bg-zinc-100 slideshow-container" data-current="0">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800" class="slide active">
+                        <img src="https://images.unsplash.com/photo-1551288049-bbbda536639a?auto=format&fit=crop&q=80&w=800" class="slide">
+                        
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-none">
+                            <div class="glass px-6 py-3 rounded-full text-white text-[10px] font-black uppercase tracking-widest border border-white/20">View Project</div>
                         </div>
-                        <div class="mt-4 bg-cyan-600 text-white px-6 py-2 comic-font text-4xl inline-block rotate-1 shadow-[4px_4px_0px_white]">
-                            PILOTFISH PORTAL
+
+                        <button class="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-2xl glass flex items-center justify-center text-black opacity-0 group-hover:opacity-100 translate-x-4 group-hover:translate-x-0 transition-all z-30 prev-btn">
+                            <i data-lucide="chevron-left"></i>
+                        </button>
+                        <button class="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-2xl glass flex items-center justify-center text-black opacity-0 group-hover:opacity-100 -translate-x-4 group-hover:translate-x-0 transition-all z-30 next-btn">
+                            <i data-lucide="chevron-right"></i>
+                        </button>
+
+                        <div class="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2.5 z-30 dots-container">
+                            <div class="h-1.5 w-8 rounded-full bg-white shadow-lg dot"></div>
+                            <div class="h-1.5 w-3 rounded-full bg-white/40 dot"></div>
                         </div>
                     </div>
-                    <div class="w-full md:w-1/2 space-y-6">
-                        <h3 class="text-4xl font-black text-pink-400 underline decoration-white decoration-4 underline-offset-8 uppercase">CUSTOMER PORTAL</h3>
-                        <div class="bg-slate-800/80 p-8 border-l-8 border-cyan-500 shadow-xl">
-                            <ul class="space-y-6">
-                                <li class="text-lg text-slate-200 font-medium flex items-start">
-                                    <span class="text-pink-500 font-bold mr-3 mt-1">▶</span>
-                                    <span>Integrated Microsoft 365 APIs for real-time asset tracking.</span>
-                                </li>
-                                <li class="text-lg text-slate-200 font-medium flex items-start">
-                                    <span class="text-pink-500 font-bold mr-3 mt-1">▶</span>
-                                    <span>Centralized support ticket management for IT consulting clients.</span>
-                                </li>
-                            </ul>
+                    <div class="p-12 flex flex-col flex-grow">
+                        <div class="flex justify-between items-start mb-6">
+                            <span class="text-[10px] font-black uppercase tracking-[0.25em] text-zinc-400">Web Platform</span>
+                            <i data-lucide="terminal" class="w-5 h-5 text-zinc-300"></i>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- TECHNICAL ARSENAL (At Bottom) -->
-        <section class="mb-40">
-            <div class="flex flex-col items-center mb-16">
-                <h2 class="comic-font text-7xl text-white mb-4 text-center px-12 py-3 chromatic-text">TECHNICAL ARSENAL</h2>
-            </div>
-
-            <!-- Languages -->
-            <div class="mb-20">
-                <div class="flex items-center gap-4 mb-8">
-                    <h3 class="comic-font text-4xl text-white bg-cyan-600 px-6 py-2 -rotate-1 shadow-[4px_4px_0px_white]">LANGUAGES</h3>
-                    <div class="flex-1 h-1 bg-white/10"></div>
-                </div>
-                <div class="overflow-x-auto pb-8 custom-scrollbar scroll-smooth">
-                    <div class="flex gap-8 px-4 min-w-max">
-                        <!-- Skills Card -->
-                        <div class="group relative bg-slate-950 p-6 border-4 border-white -skew-x-12 hover:skew-x-0 hover:-translate-y-3 transition-all cursor-default min-w-[200px] text-center">
-                            <div class="absolute inset-0 bg-cyan-900 -z-10 translate-x-3 translate-y-3 group-hover:bg-yellow-400 transition-colors"></div>
-                            <span class="comic-font text-4xl text-white group-hover:text-black transition-colors block">JAVA</span>
-                        </div>
-                        <div class="group relative bg-slate-950 p-6 border-4 border-white -skew-x-12 hover:skew-x-0 hover:-translate-y-3 transition-all cursor-default min-w-[200px] text-center">
-                            <div class="absolute inset-0 bg-cyan-900 -z-10 translate-x-3 translate-y-3 group-hover:bg-yellow-400 transition-colors"></div>
-                            <span class="comic-font text-4xl text-white group-hover:text-black transition-colors block">JAVASCRIPT</span>
-                        </div>
-                        <div class="group relative bg-slate-950 p-6 border-4 border-white -skew-x-12 hover:skew-x-0 hover:-translate-y-3 transition-all cursor-default min-w-[200px] text-center">
-                            <div class="absolute inset-0 bg-cyan-900 -z-10 translate-x-3 translate-y-3 group-hover:bg-yellow-400 transition-colors"></div>
-                            <span class="comic-font text-4xl text-white group-hover:text-black transition-colors block">PYTHON</span>
-                        </div>
-                        <div class="group relative bg-slate-950 p-6 border-4 border-white -skew-x-12 hover:skew-x-0 hover:-translate-y-3 transition-all cursor-default min-w-[200px] text-center">
-                            <div class="absolute inset-0 bg-cyan-900 -z-10 translate-x-3 translate-y-3 group-hover:bg-yellow-400 transition-colors"></div>
-                            <span class="comic-font text-4xl text-white group-hover:text-black transition-colors block">C/C++</span>
-                        </div>
-                        <div class="group relative bg-slate-950 p-6 border-4 border-white -skew-x-12 hover:skew-x-0 hover:-translate-y-3 transition-all cursor-default min-w-[200px] text-center">
-                            <div class="absolute inset-0 bg-cyan-900 -z-10 translate-x-3 translate-y-3 group-hover:bg-yellow-400 transition-colors"></div>
-                            <span class="comic-font text-4xl text-white group-hover:text-black transition-colors block">SQL</span>
-                        </div>
+                        <h3 class="text-3xl font-black text-black mb-6 tracking-tighter">Pilotfish Portal</h3>
+                        <p class="text-zinc-600 text-lg leading-relaxed font-medium">Developed a web-based customer portal for Pilotfish, enabling clients to securely access and view key business data.</p>
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <!-- Tools & Frameworks -->
-            <div class="mb-20">
-                <div class="flex items-center gap-4 mb-8">
-                    <h3 class="comic-font text-4xl text-white bg-pink-600 px-6 py-2 rotate-1 shadow-[4px_4px_0px_white]">TOOLS & FRAMEWORKS</h3>
-                    <div class="flex-1 h-1 bg-white/10"></div>
-                </div>
-                <div class="overflow-x-auto pb-8 custom-scrollbar scroll-smooth">
-                    <div class="flex gap-8 px-4 min-w-max">
-                        <div class="group relative bg-slate-950 p-6 border-4 border-white -skew-x-12 hover:skew-x-0 hover:-translate-y-3 transition-all cursor-default min-w-[200px] text-center">
-                            <div class="absolute inset-0 bg-pink-900 -z-10 translate-x-3 translate-y-3 group-hover:bg-yellow-400 transition-colors"></div>
-                            <span class="comic-font text-4xl text-white group-hover:text-black transition-colors block">REACT</span>
-                        </div>
-                        <div class="group relative bg-slate-950 p-6 border-4 border-white -skew-x-12 hover:skew-x-0 hover:-translate-y-3 transition-all cursor-default min-w-[200px] text-center">
-                            <div class="absolute inset-0 bg-pink-900 -z-10 translate-x-3 translate-y-3 group-hover:bg-yellow-400 transition-colors"></div>
-                            <span class="comic-font text-4xl text-white group-hover:text-black transition-colors block">GIT</span>
-                        </div>
-                    </div>
+    <!-- Footer -->
+    <footer class="pt-52 pb-24 px-6">
+        <div class="max-w-6xl mx-auto border-t-2 border-zinc-100 pt-24 flex flex-col md:flex-row justify-between items-start gap-20">
+            <div class="max-w-lg">
+                <div class="text-5xl font-black text-black mb-8 tracking-tighter uppercase">M. ALDOM</div>
+                <p class="text-zinc-900 text-xl font-bold opacity-80">Crafting robust software solutions and fostering innovative communities. Langley, British Columbia.</p>
+                <div class="flex gap-5 mt-12">
+                    <a href="https://www.linkedin.com/in/maaldom" class="w-16 h-16 rounded-2xl glass flex items-center justify-center text-zinc-400 hover:text-black hover:shadow-2xl transition-all">
+                        <i data-lucide="linkedin"></i>
+                    </a>
+                    <a href="https://github.com/MA-452" class="w-16 h-16 rounded-2xl glass flex items-center justify-center text-zinc-400 hover:text-black hover:shadow-2xl transition-all">
+                        <i data-lucide="github"></i>
+                    </a>
+                    <a href="mailto:matias@aldom.com" class="w-16 h-16 rounded-2xl glass flex items-center justify-center text-zinc-400 hover:text-black hover:shadow-2xl transition-all">
+                        <i data-lucide="mail"></i>
+                    </a>
                 </div>
             </div>
-            <p class="text-right text-slate-500 comic-font text-2xl italic tracking-widest">
-                << SWIPE FOR MORE POWER >>
-            </p>
-        </section>
-
-        <!-- FINAL CTA -->
-        <section class="mb-40 text-center">
-            <div class="bg-slate-900 border-8 border-white p-16 rounded-xl shadow-[20px_20px_0px_#facc15] hover-glitch transition-all">
-                <h2 class="comic-font text-7xl text-white mb-8">CONTACT?</h2>
-                <p class="text-2xl text-slate-400 mb-12 max-w-2xl mx-auto font-bold">
-                    Open to collaborating on projects that create meaningful, real-world impact.
-                </p>
-                <a href="mailto:matias@aldom.com" class="inline-block bg-pink-600 hover:bg-white hover:text-black text-white comic-font text-4xl px-12 py-5 border-4 border-white transition-all transform hover:scale-110 shadow-[8px_8px_0px_#06b6d4]">
-                    SEND MESSAGE
+            <div class="flex flex-col items-end gap-6 text-right">
+                <a href="#" class="group text-black text-sm font-black uppercase tracking-widest mb-6 flex items-center gap-2">
+                    Back to Top <i data-lucide="chevron-up" class="w-5 h-5 group-hover:-translate-y-1 transition-transform"></i>
                 </a>
+                <div class="space-y-2">
+                    <p class="text-zinc-400 text-[12px] font-black uppercase tracking-[0.3em]">&copy; 2024 • MATIAS ALDOM</p>
+                    <p class="text-zinc-300 text-[11px] font-black uppercase tracking-[0.1em]">Designed in BC</p>
+                </div>
             </div>
-        </section>
-    </main>
-
-    <footer class="py-12 bg-slate-950 text-center border-t-4 border-slate-800">
-        <p class="comic-font text-3xl tracking-[0.2em] text-slate-500">
-            MATIAS ALDOM // MULTIVERSE PORTFOLIO 2024
-        </p>
+        </div>
     </footer>
 
+    <script>
+        // Initialize Icons
+        lucide.createIcons();
+
+        // Slideshow Logic
+        document.querySelectorAll('.slideshow-container').forEach(container => {
+            const slides = container.querySelectorAll('.slide');
+            const dots = container.querySelectorAll('.dot');
+            let current = 0;
+
+            const update = () => {
+                slides.forEach((s, i) => s.classList.toggle('active', i === current));
+                dots.forEach((d, i) => {
+                    d.classList.toggle('bg-white', i === current);
+                    d.classList.toggle('w-8', i === current);
+                    d.classList.toggle('bg-white/40', i !== current);
+                    d.classList.toggle('w-3', i !== current);
+                });
+            };
+
+            container.querySelector('.next-btn').addEventListener('click', (e) => {
+                e.stopPropagation();
+                current = (current + 1) % slides.length;
+                update();
+            });
+
+            container.querySelector('.prev-btn').addEventListener('click', (e) => {
+                e.stopPropagation();
+                current = (current - 1 + slides.length) % slides.length;
+                update();
+            });
+
+            // Click image to "View Project" (Simulation)
+            container.addEventListener('click', () => {
+                console.log('Viewing project...');
+            });
+        });
+    </script>
 </body>
 </html>
