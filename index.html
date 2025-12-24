@@ -1,118 +1,281 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Matias Aldom | Software Developer</title>
+    <title>Matias Aldom | Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.34.0"
+  }
+}
+</script>
 </head>
-<body>
+<body class="halftone selection:bg-pink-500 selection:text-white">
 
-    <header>
-        <nav>
-            <div class="logo">MA.</div>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+    <!-- HERO SECTION -->
+    <main class="max-w-6xl mx-auto px-4 py-20">
+        <section class="mb-40 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div class="relative z-10">
+                <h1 class="comic-font text-8xl md:text-9xl text-white chromatic-text leading-tight mb-4">
+                    MATIAS ALDOM
+                </h1>
+                <div class="inline-block bg-pink-500 text-white font-black px-6 py-2 skew-x-12 mb-8 text-xl">
+                    SOFTWARE DEVELOPER // TWU STUDENT
+                </div>
+                <div class="flex flex-wrap gap-4 mt-6">
+                    <a href="mailto:matias@aldom.com" class="bg-white text-black font-black px-8 py-3 border-4 border-black hover:bg-cyan-500 transition-all hover:-translate-y-1 shadow-[5px_5px_0px_#ec4899]">
+                        EMAIL
+                    </a>
+                    <a href="https://www.linkedin.com/in/maaldom" target="_blank" class="bg-slate-800 text-white font-black px-8 py-3 border-4 border-white hover:bg-pink-600 transition-all hover:-translate-y-1">
+                        LINKEDIN
+                    </a>
+                </div>
+            </div>
+            <div class="relative group">
+                <div class="absolute inset-0 bg-pink-500 skew-y-6 -z-10 group-hover:skew-y-2 transition-transform duration-500"></div>
+                <div class="absolute inset-0 bg-cyan-500 -skew-x-6 -z-10 group-hover:-skew-x-2 transition-transform duration-500 delay-75"></div>
+                <div class="border-8 border-white p-2 bg-slate-900 overflow-hidden">
+                    <img src="https://picsum.photos/id/64/600/800" alt="Matias" class="w-full grayscale group-hover:grayscale-0 transition-all duration-700">
+                </div>
+                <div class="absolute bottom-6 right-6 bg-yellow-400 text-black px-4 py-1 comic-font text-2xl rotate-3">
+                    ID_ARCHIVE_092
+                </div>
+            </div>
+        </section>
 
-    <section id="hero">
-        <div class="container">
-            <h1>Matias Aldom</h1>
-            <p class="subtitle">Computer Science Student | Software Developer</p>
-            <p class="hero-summary">
-                A Computer Science student at Trinity Western University with experience building integrated web portals 
-                and automation workflows to streamline business operations.
+        <!-- EDUCATION SECTION -->
+        <section class="mb-40">
+            <div class="bg-slate-900 p-8 md:p-12 border-8 border-white rounded-lg shadow-[15px_15px_0px_#06b6d4] -rotate-1">
+                <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 mb-8">
+                    <h2 class="comic-font text-5xl text-white tracking-widest border-b-8 border-pink-500">EDUCATION</h2>
+                    <div class="bg-white text-black p-4 font-black rotate-2">
+                        EXPECTED GRAD: DEC 2027
+                    </div>
+                </div>
+                <div class="space-y-4">
+                    <h3 class="text-3xl font-black text-cyan-400">TRINITY WESTERN UNIVERSITY</h3>
+                    <p class="text-2xl text-slate-300 italic font-bold">Bachelor of Computer Science</p>
+                    <p class="text-lg text-slate-400">Langley, BC</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- EXPERIENCE SECTION -->
+        <section class="mb-40">
+            <h2 class="comic-font text-7xl text-white mb-16 text-center -skew-x-6 italic">EXPERIENCE</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <!-- Exp 1 -->
+                <div class="relative p-10 border-4 border-white bg-cyan-900/40 rotate-1 hover:rotate-0 transition-transform">
+                    <div class="absolute -top-6 -left-4 bg-white text-black px-4 py-1 comic-font text-2xl shadow-lg">01</div>
+                    <h3 class="text-2xl font-black text-white mb-1">SOFTWARE DEVELOPER INTERN</h3>
+                    <p class="text-xl font-bold text-yellow-400 mb-4">Pilotfish Networks</p>
+                    <p class="text-sm text-slate-400 mb-6">May 2025 – August 2025</p>
+                    <ul class="space-y-4">
+                        <li class="flex gap-3 text-slate-200">
+                            <span class="text-pink-500 font-bold">▶</span>
+                            <span>Built a web-based customer portal integrating Microsoft 365 APIs.</span>
+                        </li>
+                        <li class="flex gap-3 text-slate-200">
+                            <span class="text-pink-500 font-bold">▶</span>
+                            <span>Created Rewst automation workflows to classify devices by tier.</span>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Exp 2 -->
+                <div class="relative p-10 border-4 border-white bg-pink-900/40 -rotate-1 hover:rotate-0 transition-transform">
+                    <div class="absolute -top-6 -left-4 bg-white text-black px-4 py-1 comic-font text-2xl shadow-lg">02</div>
+                    <h3 class="text-2xl font-black text-white mb-1">FOUNDER & PRESIDENT (3DPMC)</h3>
+                    <p class="text-xl font-bold text-yellow-400 mb-4">Trinity Western University</p>
+                    <p class="text-sm text-slate-400 mb-6">Sept 2025 – Present</p>
+                    <ul class="space-y-4">
+                        <li class="flex gap-3 text-slate-200">
+                            <span class="text-pink-500 font-bold">▶</span>
+                            <span>Founded the 3D Printing & Modeling Club, leading workshops and campus events.</span>
+                        </li>
+                        <li class="flex gap-3 text-slate-200">
+                            <span class="text-pink-500 font-bold">▶</span>
+                            <span>Managed a multidisciplinary executive team and partnered with faculty.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJECTS SECTION -->
+        <section class="mb-40">
+            <h2 class="comic-font text-7xl text-white mb-20 text-center">OPERATIONS LOG</h2>
+            
+            <div class="space-y-32">
+                <!-- Project 1 -->
+                <div class="flex flex-col md:flex-row gap-12 items-center">
+                    <div class="w-full md:w-1/2">
+                        <div class="relative border-8 border-white shadow-[10px_10px_0px_#ec4899] bg-slate-900 group">
+                            <div id="slideshow-1" class="slideshow-container aspect-video">
+                                <img src="https://picsum.photos/seed/foodflow1/800/450" class="slide object-cover" alt="FF1">
+                                <img src="https://picsum.photos/seed/foodflow2/800/450" class="slide object-cover" alt="FF2">
+                                <img src="https://picsum.photos/seed/foodflow3/800/450" class="slide object-cover" alt="FF3">
+                            </div>
+                            <button onclick="document.getElementById('slideshow-1').scrollBy({left: -400, behavior: 'smooth'})" class="absolute left-4 top-1/2 -translate-y-1/2 bg-white text-black comic-font text-xl px-4 py-2 border-4 border-black hover:bg-yellow-400">PREV</button>
+                            <button onclick="document.getElementById('slideshow-1').scrollBy({left: 400, behavior: 'smooth'})" class="absolute right-4 top-1/2 -translate-y-1/2 bg-white text-black comic-font text-xl px-4 py-2 border-4 border-black hover:bg-cyan-400">NEXT</button>
+                        </div>
+                        <div class="mt-4 bg-pink-600 text-white px-6 py-2 comic-font text-4xl inline-block -rotate-1 shadow-[4px_4px_0px_white]">
+                            FOODFLOW
+                        </div>
+                    </div>
+                    <div class="w-full md:w-1/2 space-y-6">
+                        <h3 class="text-4xl font-black text-cyan-400 underline decoration-white decoration-4 underline-offset-8 uppercase">FOOD IN-TAKE SYSTEM</h3>
+                        <div class="bg-slate-800/80 p-8 border-l-8 border-pink-500 shadow-xl">
+                            <ul class="space-y-6">
+                                <li class="text-lg text-slate-200 font-medium flex items-start">
+                                    <span class="text-pink-500 font-bold mr-3 mt-1">▶</span>
+                                    <span>Mobile application for non-profit Food Link Society to speed up donation intake.</span>
+                                </li>
+                                <li class="text-lg text-slate-200 font-medium flex items-start">
+                                    <span class="text-pink-500 font-bold mr-3 mt-1">▶</span>
+                                    <span>Automated volunteer recording of donations and report generation.</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="flex flex-col md:flex-row-reverse gap-12 items-center">
+                    <div class="w-full md:w-1/2">
+                        <div class="relative border-8 border-white shadow-[10px_10px_0px_#06b6d4] bg-slate-900">
+                            <div id="slideshow-2" class="slideshow-container aspect-video">
+                                <img src="https://picsum.photos/seed/portal1/800/450" class="slide object-cover" alt="P1">
+                                <img src="https://picsum.photos/seed/portal2/800/450" class="slide object-cover" alt="P2">
+                                <img src="https://picsum.photos/seed/portal3/800/450" class="slide object-cover" alt="P3">
+                            </div>
+                            <button onclick="document.getElementById('slideshow-2').scrollBy({left: -400, behavior: 'smooth'})" class="absolute left-4 top-1/2 -translate-y-1/2 bg-white text-black comic-font text-xl px-4 py-2 border-4 border-black hover:bg-yellow-400">PREV</button>
+                            <button onclick="document.getElementById('slideshow-2').scrollBy({left: 400, behavior: 'smooth'})" class="absolute right-4 top-1/2 -translate-y-1/2 bg-white text-black comic-font text-xl px-4 py-2 border-4 border-black hover:bg-pink-400">NEXT</button>
+                        </div>
+                        <div class="mt-4 bg-cyan-600 text-white px-6 py-2 comic-font text-4xl inline-block rotate-1 shadow-[4px_4px_0px_white]">
+                            PILOTFISH PORTAL
+                        </div>
+                    </div>
+                    <div class="w-full md:w-1/2 space-y-6">
+                        <h3 class="text-4xl font-black text-pink-400 underline decoration-white decoration-4 underline-offset-8 uppercase">CUSTOMER PORTAL</h3>
+                        <div class="bg-slate-800/80 p-8 border-l-8 border-cyan-500 shadow-xl">
+                            <ul class="space-y-6">
+                                <li class="text-lg text-slate-200 font-medium flex items-start">
+                                    <span class="text-pink-500 font-bold mr-3 mt-1">▶</span>
+                                    <span>Integrated Microsoft 365 APIs for real-time asset tracking.</span>
+                                </li>
+                                <li class="text-lg text-slate-200 font-medium flex items-start">
+                                    <span class="text-pink-500 font-bold mr-3 mt-1">▶</span>
+                                    <span>Centralized support ticket management for IT consulting clients.</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TECHNICAL ARSENAL (At Bottom) -->
+        <section class="mb-40">
+            <div class="flex flex-col items-center mb-16">
+                <h2 class="comic-font text-7xl text-white mb-4 text-center px-12 py-3 border-x-8 border-cyan-500 chromatic-text">TECHNICAL ARSENAL</h2>
+                <div class="w-48 h-2 bg-pink-500"></div>
+            </div>
+
+            <!-- Languages -->
+            <div class="mb-20">
+                <div class="flex items-center gap-4 mb-8">
+                    <h3 class="comic-font text-4xl text-white bg-cyan-600 px-6 py-2 -rotate-1 shadow-[4px_4px_0px_white]">LANGUAGES</h3>
+                    <div class="flex-1 h-1 bg-white/10"></div>
+                </div>
+                <div class="overflow-x-auto pb-8 custom-scrollbar scroll-smooth">
+                    <div class="flex gap-8 px-4 min-w-max">
+                        <!-- Skills Card -->
+                        <div class="group relative bg-slate-950 p-6 border-4 border-white -skew-x-12 hover:skew-x-0 hover:-translate-y-3 transition-all cursor-default min-w-[200px] text-center">
+                            <div class="absolute inset-0 bg-cyan-900 -z-10 translate-x-3 translate-y-3 group-hover:bg-yellow-400 transition-colors"></div>
+                            <span class="comic-font text-4xl text-white group-hover:text-black transition-colors block">JAVA</span>
+                        </div>
+                        <div class="group relative bg-slate-950 p-6 border-4 border-white -skew-x-12 hover:skew-x-0 hover:-translate-y-3 transition-all cursor-default min-w-[200px] text-center">
+                            <div class="absolute inset-0 bg-cyan-900 -z-10 translate-x-3 translate-y-3 group-hover:bg-yellow-400 transition-colors"></div>
+                            <span class="comic-font text-4xl text-white group-hover:text-black transition-colors block">JAVASCRIPT</span>
+                        </div>
+                        <div class="group relative bg-slate-950 p-6 border-4 border-white -skew-x-12 hover:skew-x-0 hover:-translate-y-3 transition-all cursor-default min-w-[200px] text-center">
+                            <div class="absolute inset-0 bg-cyan-900 -z-10 translate-x-3 translate-y-3 group-hover:bg-yellow-400 transition-colors"></div>
+                            <span class="comic-font text-4xl text-white group-hover:text-black transition-colors block">PYTHON</span>
+                        </div>
+                        <div class="group relative bg-slate-950 p-6 border-4 border-white -skew-x-12 hover:skew-x-0 hover:-translate-y-3 transition-all cursor-default min-w-[200px] text-center">
+                            <div class="absolute inset-0 bg-cyan-900 -z-10 translate-x-3 translate-y-3 group-hover:bg-yellow-400 transition-colors"></div>
+                            <span class="comic-font text-4xl text-white group-hover:text-black transition-colors block">C/C++</span>
+                        </div>
+                        <div class="group relative bg-slate-950 p-6 border-4 border-white -skew-x-12 hover:skew-x-0 hover:-translate-y-3 transition-all cursor-default min-w-[200px] text-center">
+                            <div class="absolute inset-0 bg-cyan-900 -z-10 translate-x-3 translate-y-3 group-hover:bg-yellow-400 transition-colors"></div>
+                            <span class="comic-font text-4xl text-white group-hover:text-black transition-colors block">SQL</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tools & Frameworks -->
+            <div class="mb-20">
+                <div class="flex items-center gap-4 mb-8">
+                    <h3 class="comic-font text-4xl text-white bg-pink-600 px-6 py-2 rotate-1 shadow-[4px_4px_0px_white]">TOOLS & FRAMEWORKS</h3>
+                    <div class="flex-1 h-1 bg-white/10"></div>
+                </div>
+                <div class="overflow-x-auto pb-8 custom-scrollbar scroll-smooth">
+                    <div class="flex gap-8 px-4 min-w-max">
+                        <div class="group relative bg-slate-950 p-6 border-4 border-white -skew-x-12 hover:skew-x-0 hover:-translate-y-3 transition-all cursor-default min-w-[200px] text-center">
+                            <div class="absolute inset-0 bg-pink-900 -z-10 translate-x-3 translate-y-3 group-hover:bg-yellow-400 transition-colors"></div>
+                            <span class="comic-font text-4xl text-white group-hover:text-black transition-colors block">REACT</span>
+                        </div>
+                        <div class="group relative bg-slate-950 p-6 border-4 border-white -skew-x-12 hover:skew-x-0 hover:-translate-y-3 transition-all cursor-default min-w-[200px] text-center">
+                            <div class="absolute inset-0 bg-pink-900 -z-10 translate-x-3 translate-y-3 group-hover:bg-yellow-400 transition-colors"></div>
+                            <span class="comic-font text-4xl text-white group-hover:text-black transition-colors block">NODE.JS</span>
+                        </div>
+                        <div class="group relative bg-slate-950 p-6 border-4 border-white -skew-x-12 hover:skew-x-0 hover:-translate-y-3 transition-all cursor-default min-w-[200px] text-center">
+                            <div class="absolute inset-0 bg-pink-900 -z-10 translate-x-3 translate-y-3 group-hover:bg-yellow-400 transition-colors"></div>
+                            <span class="comic-font text-4xl text-white group-hover:text-black transition-colors block">FIREBASE</span>
+                        </div>
+                        <div class="group relative bg-slate-950 p-6 border-4 border-white -skew-x-12 hover:skew-x-0 hover:-translate-y-3 transition-all cursor-default min-w-[200px] text-center">
+                            <div class="absolute inset-0 bg-pink-900 -z-10 translate-x-3 translate-y-3 group-hover:bg-yellow-400 transition-colors"></div>
+                            <span class="comic-font text-4xl text-white group-hover:text-black transition-colors block">REWST</span>
+                        </div>
+                        <div class="group relative bg-slate-950 p-6 border-4 border-white -skew-x-12 hover:skew-x-0 hover:-translate-y-3 transition-all cursor-default min-w-[200px] text-center">
+                            <div class="absolute inset-0 bg-pink-900 -z-10 translate-x-3 translate-y-3 group-hover:bg-yellow-400 transition-colors"></div>
+                            <span class="comic-font text-4xl text-white group-hover:text-black transition-colors block">GIT</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="text-right text-slate-500 comic-font text-2xl italic tracking-widest">
+                << SWIPE FOR MORE POWER >>
             </p>
-            <div class="hero-btns">
-                <a href="#projects" class="btn">View Projects</a>
-                <a href="#contact" class="btn btn-outline">Get In Touch</a>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="about" class="container">
-        <h2 class="section-title">About Me</h2>
-        <p>
-            I am a Computer Science student at Trinity Western University, graduating in May 2027. 
-            I am passionate about creating digital tools that solve real-world problems, from helping non-profits 
-            manage food donations to automating asset tracking for IT consultancies. 
-            As the Founder of the 3D Printing & Modeling Club, I also enjoy fostering a community of makers and exploring emerging technologies.
+        <!-- FINAL CTA -->
+        <section class="mb-40 text-center">
+            <div class="bg-slate-900 border-8 border-white p-16 rounded-xl shadow-[20px_20px_0px_#facc15] hover-glitch transition-all">
+                <h2 class="comic-font text-7xl text-white mb-8">INITIATE CONTACT?</h2>
+                <p class="text-2xl text-slate-400 mb-12 max-w-2xl mx-auto font-bold">
+                    Whether you have a breakthrough project or just want to talk code, I'm ready to suit up.
+                </p>
+                <a href="mailto:matias@aldom.com" class="inline-block bg-pink-600 hover:bg-white hover:text-black text-white comic-font text-4xl px-12 py-5 border-4 border-white transition-all transform hover:scale-110 shadow-[8px_8px_0px_#06b6d4]">
+                    SEND MESSAGE
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="py-12 bg-slate-950 text-center border-t-4 border-slate-800">
+        <p class="comic-font text-3xl tracking-[0.2em] text-slate-500">
+            MATIAS ALDOM // MULTIVERSE PORTFOLIO 2024
         </p>
-
-        <div class="skills-grid">
-            <div class="skill-category">
-                <h3>Languages</h3>
-                <p>Java, C/C++, JavaScript, Python, SQL, PHP, HTML/CSS</p>
-            </div>
-            <div class="skill-category">
-                <h3>Tools & Frameworks</h3>
-                <p>React, Node, Firebase, Git, AWS, Rewst</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="experience" class="bg-light">
-        <div class="container">
-            <h2 class="section-title">Experience & Education</h2>
-            
-            <div class="timeline-item">
-                <h3>Software Developer Intern | Pilotfish Networks</h3>
-                <span class="date">May 2025 – August 2025</span>
-                <ul>
-                    <li>Integrated Microsoft 365 APIs to build a real-time customer portal.</li>
-                    <li>Developed Rewst automation workflows to classify and track client device lifecycles.</li>
-                </ul>
-            </div>
-
-            <div class="timeline-item">
-                <h3>Founder & President | 3DPMC (TWU)</h3>
-                <span class="date">September 2025 – Present</span>
-                <ul>
-                    <li>Leading a multidisciplinary team to foster innovation in 3D design and printing.</li>
-                </ul>
-            </div>
-
-            <div class="timeline-item">
-                <h3>Bachelor of Computer Science</h3>
-                <span class="date">Trinity Western University | Expected May 2027</span>
-            </div>
-        </div>
-    </section>
-
-    <section id="projects" class="container">
-        <h2 class="section-title">Selected Projects</h2>
-        <div class="project-grid">
-            <div class="project-card">
-                <h3>FoodFlow</h3>
-                <p>A mobile application for Food Link Society to digitize and speed up donated food intake systems.</p>
-                <p class="tech-stack"><strong>Tech:</strong> Mobile App Development (Placeholder for Stack)</p>
-                <a href="https://github.com/MA-452/FoodFlow" class="project-link">GitHub Repo &rarr;</a>
-            </div>
-            
-            <div class="project-card">
-                <h3>Pilotfish Portal</h3>
-                <p>A secure customer portal displaying assets, subscriptions, and support tickets via Microsoft 365 APIs.</p>
-                <p class="tech-stack"><strong>Tech:</strong> React, Node, Microsoft 365 APIs</p>
-            </div>
-        </div>
-    </section>
-
-    <footer id="contact">
-        <div class="container">
-            <h2 class="section-title">Contact</h2>
-            <p>I am always open to discussing new opportunities or tech projects.</p>
-            <div class="contact-links">
-                <a href="mailto:matias@aldom.com">matias@aldom.com</a>
-                <a href="https://www.linkedin.com/in/matias-aldom-7273a634b/" target="_blank">LinkedIn</a>
-                <a href="https://github.com/MA-452" target="_blank">GitHub</a>
-            </div>
-            <p class="copyright">&copy; 2025 Matias Aldom</p>
-        </div>
     </footer>
 
 </body>
