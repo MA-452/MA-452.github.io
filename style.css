@@ -1,77 +1,129 @@
 body {
     font-family: 'Inter', sans-serif;
-    background-color: #f8f9fa;
+    background-color: #f0f2f5;
     color: #000000;
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
     scroll-behavior: smooth;
 }
 
+/* Enhanced Glassmorphism */
 .glass {
-    background: rgba(255, 255, 255, 0.8);
-    backdrop-filter: blur(40px) saturate(180%);
-    -webkit-backdrop-filter: blur(40px) saturate(180%);
-    border: 1px solid rgba(255, 255, 255, 0.4);
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.05);
+    background: rgba(255, 255, 255, 0.45);
+    backdrop-filter: blur(25px) saturate(180%);
+    -webkit-backdrop-filter: blur(25px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
 }
 
 .glass-card {
-    background: rgba(255, 255, 255, 0.65);
-    backdrop-filter: blur(30px) saturate(160%);
-    -webkit-backdrop-filter: blur(30px) saturate(160%);
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    border-top: 1px solid rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.35);
+    backdrop-filter: blur(20px) saturate(160%);
+    -webkit-backdrop-filter: blur(20px) saturate(160%);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-top: 1px solid rgba(255, 255, 255, 0.7);
     transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
-    box-shadow: 0 4px 24px -1px rgba(0, 0, 0, 0.04);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.03);
 }
 
 .glass-card:hover {
-    background: rgba(255, 255, 255, 0.85);
+    background: rgba(255, 255, 255, 0.5);
     transform: translateY(-8px);
-    box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.08);
-    border-color: rgba(0, 0, 0, 0.1);
+    box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.1);
+    border-color: rgba(255, 255, 255, 0.8);
 }
 
 .glow-blob {
     position: fixed;
     z-index: -1;
-    filter: blur(120px);
-    opacity: 0.2;
+    filter: blur(140px);
+    opacity: 0.25;
     border-radius: 50%;
     pointer-events: none;
 }
 
 .bg-grid {
-    background-size: 80px 80px;
-    background-image: linear-gradient(to right, rgba(0,0,0,0.02) 1px, transparent 1px),
-                        linear-gradient(to bottom, rgba(0,0,0,0.02) 1px, transparent 1px);
+    background-size: 100px 100px;
+    background-image: linear-gradient(to right, rgba(0,0,0,0.03) 1px, transparent 1px),
+                        linear-gradient(to bottom, rgba(0,0,0,0.03) 1px, transparent 1px);
 }
 
 .ghost-number {
     position: absolute;
     top: -5rem;
-    left: 0;
-    font-size: 12rem;
+    left: -1rem;
+    font-size: 14rem;
     font-weight: 900;
-    color: rgba(0, 0, 0, 0.05);
+    color: rgba(0, 0, 0, 0.04);
     line-height: 1;
     z-index: 0;
     pointer-events: none;
     letter-spacing: -0.05em;
 }
 
-.slide {
+/* Modal Overrides for cleaner padding and more glass */
+#project-modal {
+    display: none;
+    opacity: 0;
+    transition: all 0.4s ease;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+}
+
+#project-modal.active {
+    display: flex;
+    opacity: 1;
+}
+
+.modal-content {
+    transform: translateY(20px) scale(0.98);
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    background: rgba(255, 255, 255, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+#project-modal.active .modal-content {
+    transform: translateY(0) scale(1);
+}
+
+.modal-slide {
     position: absolute;
     inset: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    transition: opacity 0.7s ease-in-out, transform 0.7s ease-in-out;
+    object-fit: contain;
+    transition: opacity 0.5s ease-in-out;
     opacity: 0;
+    filter: drop-shadow(0 20px 40px rgba(0,0,0,0.1));
 }
 
-.slide.active {
+.modal-slide.active {
     opacity: 1;
+}
+
+/* Aspect ratio helpers */
+.aspect-phone { 
+    aspect-ratio: 9/19; 
+    max-height: 85%;
+}
+.aspect-laptop { 
+    aspect-ratio: 16/10; 
+    width: 90%;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.2);
 }
 
 ::selection {
